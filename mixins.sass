@@ -1,0 +1,35 @@
+// Border radius
+@mixin activeRad
+	border-radius: 3px 3px 0 0
+
+@mixin leftRad
+	border-radius: 3px 0 0 0
+
+@mixin rightRad
+	border-radius: 0 3px 0 0
+
+// Fade In
+@include keyframes(fadeIn)
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+// Fade In
+@include keyframes(fadeOut)
+	from
+		opacity: 1
+	to
+		opacity: 0
+
+// Clear fix
+@mixin clearfix
+	&:after
+		content: ""
+		display: table
+		clear: both
+
+// Background size support
+@mixin background-size($size)
+	-webkit-background-size: $size
+	background-size: $size
