@@ -1,0 +1,78 @@
+input[type=submit],
+.button
+	background: $blue
+	border: 0
+	border-radius: 3px
+	color: $white
+	cursor: pointer
+	display: inline-block
+	font: 13px/15px 'Stag-Sans-Medium',Arial,sans-serif
+	margin: 6px 0 0
+	padding: 6px 20px 8px
+	text-align: center
+	white-space: normal
+	@include user-select(none)
+	@include box-sizing(border-box)
+	@include breakpoint(med)
+		font-size: 16px
+		line-height: 30px
+
+	&:hover
+		background: $blueHover
+		color: $white
+
+	.btnGroup &
+		margin-top: 12px
+		width: 180px
+		@include breakpoint(med)
+			width: 140px
+		@include breakpoint(small)
+			width: 100%
+
+	&.genericBtn
+		background: $genericBtn
+		&:hover
+			background: lighten( $genericBtn, 10% )
+			color: $white
+
+	&.greyBtn
+		background: #999
+		&:hover
+			background: lighten( #999, 10% )
+			color: $white
+
+	&.lightBtn
+		background: #f7f7f7
+		border: 1px solid #ddd
+		color: #666
+		&:hover
+			background: lighten( #f7f7f7, 10% )
+			color: #878787
+
+	&.bigBtn
+		clear: both
+		display: block
+		font-size: 18px
+		line-height: 28px
+		margin: 45px auto 15px
+		text-transform: uppercase
+		width: 260px
+		@include breakpoint(med)
+			margin: 10px auto 10px
+
+.btnGroup
+	overflow: hidden
+
+.boxBtn,
+.centredBtn
+	border: 1px solid #ddd
+	clear: both
+	display: block
+	line-height: 34px
+	margin: 0
+	padding: 0 10px
+	text-align: center
+
+.centredBtn
+	border: 0
+	margin: 20px 0
