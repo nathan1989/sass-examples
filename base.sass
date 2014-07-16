@@ -1,0 +1,190 @@
+/* Global Styles */
+html
+	background: $footerGrey no-repeat 50% 0 fixed
+
+body
+	background: $darkGrey
+	color: #333
+	font: 14px/18px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif
+	margin: 0 auto
+	text-rendering: optimizeLegibility
+	width: 100%
+
+.clear
+	clear: both
+
+.clearBoth
+	clear: both
+	height: 0
+	font-size: 1px
+	line-height: 1px
+	display: block
+	overflow: hidden
+
+.floatLeft, .left
+	float: left !important
+
+.floatRight, .right
+	float: right !important
+
+.hiddenTitle,
+.offScreen
+	position: absolute
+	left: -9999px
+
+.hidden
+	display: none
+
+/* Type */
+
+h1
+	color: $black
+	font: bold 28px/28px 'Stag-Serif-Medium', Arial, sans-serif
+	margin: 0 0 12px
+
+h2
+	color: $black
+	font: bold 20px/24px 'Stag-Serif-Medium', Arial, sans-serif
+	margin: 0 0 7px
+
+	a
+		color: $black
+
+h3
+	font: normal 24px/26px Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif
+	margin: 0 0 7px
+
+a,
+.localLink
+	color: #069
+	cursor: pointer
+	font-weight: bold
+	text-decoration: none
+
+.localLink
+	@include user-select(none)
+
+a, p, img, blockquote, input, textarea, label, span, select, figure, figcaption
+	/* hover effects */
+	@include transition(color, background-color, border-color, opacity, font-size 0.2s)
+
+h1, h2, h3, h4, h5, h6
+	@include transition(background-color, border-color, opacity, font-size 0.2s)
+
+article a:visited
+	color: #44216f
+
+
+a:focus,
+.localLink
+	outline: none
+
+
+a:hover,
+a.hover,
+article a:hover,
+article a.hover,
+.localLink:hover,
+.localLink.hover
+	color: #00adef
+
+
+a:hover img,
+a.hover img
+	filter: alpha(opacity=90)
+	opacity: 0.9
+
+
+p
+	margin: 0 0 10px
+
+
+em, i
+	font-style: italic
+
+
+strong, b
+	font-weight: bold
+
+.clearWrap:after
+	clear: both
+	content: ""
+	display: block
+	height: 0
+	overflow: hidden
+
+
+li
+	list-style: none
+	margin: 0
+	padding: 0
+	-webkit-transition-property: color, background-color
+	-webkit-transition-duration: 0.1s /* Webkit */
+	-moz-transition-property: color, background-color
+	-moz-transition-duration: 0.1s /* Gecko */
+	-ms-transition-property: color, background-color
+	-ms-transition-duration: 0.1s /* Trident */
+	-o-transition-property: color, background-color
+	-o-transition-duration: 0.1s /* Opera */
+	transition-property: color, background-color
+	transition-duration: 0.1s /* The Future */
+
+input, select, textarea, select, label
+	@include box-sizing(border-box)
+
+small
+	color: $inputBorder
+
+.siteWrap
+	overflow: hidden
+
+.wrapper
+	background: #eee
+	position: relative
+	z-index: 1
+	@include transition(transform 0.3s)
+
+.wrapperInner
+	margin: 0 auto
+	padding: 15px 0
+	width: 960px
+	@include clearfix
+	@include breakpoint(high)
+		width: 100%
+	@include breakpoint(med)
+		padding: 0 0 15px
+
+// generic animation classes for use with keyframes
+.fadeIn
+	@include animation(fadeIn .3s)
+
+.fadeOut
+	@include animation(fadeOut .3s)
+
+// Advert space 300x250
+.adBox
+	border: 1px solid #ddd
+	clear: both
+	float: left
+	height: 250px
+	width: 300px
+	@include box-sizing(border-box)
+	@include breakpoint(high)
+		display: none
+
+// keeps a phone number on a single line
+.phoneNumber
+	display: inline-block
+	font-weight: bold
+
+// Loading Herald logo gif
+.hLoader
+	display: block
+	text-align: center
+	&:before
+		background: url(../img/loader.gif) 50% 50% no-repeat
+		content: ''
+		display: block
+		height: 75px
+		margin: 0 auto 30px
+		width: 60px
