@@ -1,4 +1,4 @@
 sass-examples
 =============
 
-Examples of the beauty that is SASS.
+Examples of SASS files which I have created.
