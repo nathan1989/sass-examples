@@ -1,0 +1,19 @@
+@mixin breakpoint($point)
+	@if $point == high
+		@media screen and (max-width: 970px)
+			@content
+	@else if $point == medHigh
+		@media screen and (max-width: 800px)
+			@content
+	@else if $point == med
+		@media screen and (max-width: 600px)
+			@content
+	@else if $point == medSmall
+		@media screen and (max-width: 500px)
+			@content
+	@else if $point == small
+		@media screen and (max-width: 400px)
+			@content
+	@else if $point == verySmall
+		@media screen and (max-width: 320px)
+			@content
